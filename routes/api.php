@@ -20,3 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/login', \App\Http\Controllers\Auth\LoginController::class);
 Route::post('/logout', \App\Http\Controllers\Auth\LogoutController::class);
+
+Route::get('/files', [\App\Http\Controllers\FileController::class, 'index']);
+
